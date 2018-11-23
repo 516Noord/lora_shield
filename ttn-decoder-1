@@ -1,0 +1,15 @@
+function Decoder(bytes, port) {
+  // Decode plain text; for testing only
+  var firstLetter = (bytes[0]);
+  var secondLetter = (bytes[1]);
+  firstLetter = String.fromCharCode(firstLetter);
+  secondLetter = String.fromCharCode(secondLetter);
+  
+  return {
+      payload: {
+        payloadValue: String.fromCharCode.apply(null, bytes),
+        payloadfirstLetter : firstLetter,
+        payloadsecondLetter : secondLetter
+      }
+  };
+}
